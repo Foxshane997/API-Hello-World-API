@@ -1,17 +1,15 @@
-const { model } = require("mongoose")
+// Requirements
+const mongoose = require('mongoose')
+const { Schema } = mongoose 
 
-// Requirement
-const mongoose = require 
-const { Schema } = mongoose
-
-// Schema
-const languageSchema = new Schema ({
-    name: { type: String, required: true},
+// schema:
+const languageSchema = new Schema({
+    name: { type: String, required: true },
     greeting: String,
     pangram: String,
     filler: String
 })
 
-// Model & Export
+// Model and Export: 
 const Language = mongoose.model('Language', languageSchema)
-model.exports = Language
+module.exports = Language
